@@ -59,7 +59,7 @@ jobs:
     - name: Upload to GitHub Release
       uses: softprops/action-gh-release@v2
       with:
-        files: ./Serilog.Sinks.File.Extensions/bin/Release/Serilog.Sinks.File.Extensions.${{ steps.project_version.outputs.version }}.nupkg
+        files: ./Serilog.Sinks.File.Extensions/bin/Release/Biz.Bizadm.Serilog.Sinks.File.Extensions.${{ steps.project_version.outputs.version }}.nupkg
         tag_name: ${{ env.tag_name }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
