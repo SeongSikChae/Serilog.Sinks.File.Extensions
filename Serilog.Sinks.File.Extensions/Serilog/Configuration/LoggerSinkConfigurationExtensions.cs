@@ -50,7 +50,7 @@
 			if (!logDirInfo.Exists)
 				logDirInfo.Create();
 
-			FileInfo logFileInfo = logDirInfo.GetFileInfo(logFile);
+			FileInfo logFileInfo = logDirInfo.CombineFileInfo(logFile);
 
 			return sinkConfiguration.File(logFileInfo.FullName, restrictedToMinimumLevel, outputTemplate, formatProvider, fileSizeLimitBytes, 
 				levelSwitch, buffered, shared, flushToDiskInterval, rollingInterval, rollOnFileSizeLimit, retainedFileCountLimit, encoding, hooks,
